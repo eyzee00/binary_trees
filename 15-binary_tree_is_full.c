@@ -22,12 +22,12 @@ int binary_tree_is_full(const binary_tree_t *tree)
 int is_full(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return (0);
+		return (1);
 	if ((tree->left != NULL && tree->right == NULL) ||
 	    (tree->left == NULL && tree->right != NULL) ||
 	    is_full(tree->left) == 0 ||
 	    is_full(tree->right) == 0)
-		return (0);	
+		return (0);
 	return (1);
 }
 
